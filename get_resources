@@ -1,0 +1,12 @@
+import boto3
+
+client = boto3.client('resourcegroupstaggingapi', region_name='eu-west-2')
+
+
+resource_list = client.get_resources()
+print(resource_list)
+
+for resource in resource_list.get('ResourceTagMappingList'):
+    print(resource.get('ResourceARN'))
+
+

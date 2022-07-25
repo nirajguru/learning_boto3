@@ -1,0 +1,27 @@
+import pandas as pd
+
+
+print(f"pandas version: {pd.__version__}")
+
+'''
+my_data_set = {
+    "name": ["Niraj", "Raj"],
+    "age": [    40,      39 ]
+}
+
+df = pd.DataFrame(my_data_set)
+print(df.loc[0])
+'''
+'''
+calories = {"day1": 420, "day2": 380, "day3": 390}
+print(pd.Series(calories))
+'''
+
+'''
+df = pd.read_csv(r'C:\Users\Niraj Gurupanchayan\OneDrive\AWS\learning_boto3\data.csv')
+print(df)
+print(pd.options.display.max_rows)
+'''
+
+df = pd.read_json(r'C:\Users\Niraj Gurupanchayan\OneDrive\AWS\learning_boto3\data.js')
+print(df.to_string())

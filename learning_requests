@@ -1,0 +1,12 @@
+import requests
+
+response = requests.get('https://api.github.com)
+# print(response.json())
+
+my_headers = response.headers
+print(my_headers['Server'])
+
+if response.status_code == 200:
+    print("Success!")
+else:
+    print("Not Found!")
